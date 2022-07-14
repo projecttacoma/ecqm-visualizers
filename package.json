@@ -13,6 +13,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
+    "check": "npm run test && npm run prettier && npm run lint",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prettier": "prettier --check \"**/*.{js,ts,jsx,tsx,css}\"",
