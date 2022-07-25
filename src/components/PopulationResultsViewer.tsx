@@ -1,15 +1,15 @@
 import React from 'react';
 import { Table } from '@mantine/core';
 import {
-  MeasureReportViewerProps,
+  PopulationReportViewerProps,
   DetailedMeasureReport,
   MeasureReportInfoArray,
   PopulationResult,
-} from '../types/MeasureReportViewerTypes';
+} from '../types/PopulationResultsViewerTypes';
 
-export default function MeasureReportViewer({
+export default function PopulationReportViewer({
   reports,
-}: MeasureReportViewerProps) {
+}: PopulationReportViewerProps) {
   return (
     <Table>
       <thead>

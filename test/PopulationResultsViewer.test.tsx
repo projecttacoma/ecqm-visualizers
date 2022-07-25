@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import MeasureReportViewer from '../src/components/MeasureReportViewer';
-import { DetailedMeasureReport } from '../src/types/MeasureReportViewerTypes';
+import PopulationResultsViewer from '../src/components/PopulationResultsViewer';
+import { DetailedMeasureReport } from '../src/types/PopulationResultsViewerTypes';
 
 const mrs = require('./fixtures/measureReports.json');
 
 describe('MeasureReportViewer', () => {
   it('renders the proper headers and data for regular Measure Report input', () => {
-    render(<MeasureReportViewer reports={mrs as fhir4.MeasureReport[]} />);
+    render(<PopulationResultsViewer reports={mrs as fhir4.MeasureReport[]} />);
     const numerIdentifier = screen.getByText('Patient/numer-EXM130');
     const denomIdentifier = screen.getByText('Patient/denom-EXM130');
     const numQualified = screen.getAllByText('1');
@@ -25,7 +25,9 @@ describe('MeasureReportViewer', () => {
       { label: 'Patient2', report: mrs[1] },
     ];
     render(
-      <MeasureReportViewer reports={labeledMRs as DetailedMeasureReport[]} />
+      <PopulationResultsViewer
+        reports={labeledMRs as DetailedMeasureReport[]}
+      />
     );
     const numerIdentifier = screen.getByText('Patient1');
     const denomIdentifier = screen.getByText('Patient2');

@@ -1,4 +1,4 @@
-export type MeasureReportViewerProps = {
+export type PopulationReportViewerProps = {
   reports: MeasureReportInfoArray;
 };
 
