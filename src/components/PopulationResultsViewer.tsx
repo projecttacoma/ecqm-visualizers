@@ -6,6 +6,7 @@ import {
   MeasureReportInfoArray,
   PopulationResult,
 } from '../types/PopulationResultsViewerTypes';
+import { fhirJson } from '@fhir-typescript/r4-core';
 
 export default function PopulationReportViewer({
   reports,
@@ -56,15 +57,15 @@ function constructPopulationResultsArray(reports: MeasureReportInfoArray) {
  * @returns a TSX component which displays the population results as a table row
  */
 function extractPopulationResultRow(
-  mr: fhir4.MeasureReport,
+  mr: fhirJson.MeasureReport,
   label: string = 'Unlabeled Patient'
 ) {
   const group = mr.group?.[0];
   const populationResults = { label };
   group?.population?.reduce((acc: any, e) => {
-    const key = e?.code?.coding?.[0].code;
+    const key = e?.code?.coding?.[0]?.code;
     if (key) {
-      acc[key as string] = e.count;
+      acc[key as string] = e?.count;
     }
     return acc;
   }, populationResults);
@@ -99,6 +100,6 @@ function isDetailedMeasureReportArr(
 
 function isMeasureReportArr(
   mrInfoArr: any
-): mrInfoArr is fhir4.MeasureReport[] {
+): mrInfoArr is fhirJson.MeasureReport[] {
   return mrInfoArr.every((e: any) => e.resourceType === 'MeasureReport');
 }

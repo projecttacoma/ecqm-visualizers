@@ -3,12 +3,15 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PopulationResultsViewer from '../src/components/PopulationResultsViewer';
 import { DetailedMeasureReport } from '../src/types/PopulationResultsViewerTypes';
+import { fhirJson } from '@fhir-typescript/r4-core';
 
 const mrs = require('./fixtures/measureReports.json');
 
 describe('MeasureReportViewer', () => {
   it('renders the proper headers and data for regular Measure Report input', () => {
-    render(<PopulationResultsViewer reports={mrs as fhir4.MeasureReport[]} />);
+    render(
+      <PopulationResultsViewer reports={mrs as fhirJson.MeasureReport[]} />
+    );
     const numerIdentifier = screen.getByText('Patient/numer-EXM130');
     const denomIdentifier = screen.getByText('Patient/denom-EXM130');
     const numQualified = screen.getAllByText('1');

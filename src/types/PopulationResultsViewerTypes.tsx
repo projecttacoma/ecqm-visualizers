@@ -1,14 +1,16 @@
+import { fhirJson } from '@fhir-typescript/r4-core';
+
 export type PopulationReportViewerProps = {
   reports: MeasureReportInfoArray;
 };
 
 export type DetailedMeasureReport = {
   label: string;
-  report: fhir4.MeasureReport;
+  report: fhirJson.MeasureReport;
 };
 
 export type MeasureReportInfoArray = Array<
-  fhir4.MeasureReport | DetailedMeasureReport
+  fhirJson.MeasureReport | DetailedMeasureReport
 >;
 
 export type PopulationResult = {
