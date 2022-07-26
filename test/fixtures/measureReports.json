@@ -1,0 +1,192 @@
+[
+  {
+    "id": "10e19515-5f16-4500-9da3-7d73084ff466",
+    "resourceType": "MeasureReport",
+    "period": {
+      "start": "2019-01-01",
+      "end": "2019-12-31"
+    },
+    "status": "complete",
+    "type": "individual",
+    "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130",
+    "group": [
+      {
+        "id": "group-1",
+        "population": [
+          {
+            "count": 1,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                }
+              ]
+            }
+          },
+          {
+            "count": 1,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                }
+              ]
+            }
+          },
+          {
+            "count": 1,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                }
+              ]
+            }
+          },
+          {
+            "count": 0,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                }
+              ]
+            }
+          }
+        ],
+        "measureScore": {
+          "value": 1
+        }
+      }
+    ],
+    "evaluatedResource": [
+      {
+        "reference": "#ec213522-120d-4f7c-979a-936630be962a"
+      },
+      {
+        "reference": "#81b1b1a5-e0b7-41df-af19-779387435b67"
+      },
+      {
+        "reference": "#57e693e6-1d6e-415b-9a3c-06a4aeea38fe"
+      },
+      {
+        "reference": "#a5f7c342-dae0-4f24-a273-7b6bd823be26"
+      },
+      {
+        "reference": "Patient/numer-EXM130"
+      },
+      {
+        "reference": "Procedure/numer-EXM130-1"
+      },
+      {
+        "reference": "Encounter/numer-EXM130-4"
+      }
+    ],
+    "subject": {
+      "reference": "Patient/numer-EXM130"
+    }
+  },
+  {
+    "id": "6c355eed-7660-465f-af89-43707b490c06",
+    "resourceType": "MeasureReport",
+    "period": {
+      "start": "2019-01-01",
+      "end": "2019-12-31"
+    },
+    "status": "complete",
+    "type": "individual",
+    "measure": "http://hl7.org/fhir/us/cqfmeasures/Measure/EXM130",
+    "group": [
+      {
+        "id": "group-1",
+        "population": [
+          {
+            "count": 1,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "initial-population",
+                  "display": "Initial Population"
+                }
+              ]
+            }
+          },
+          {
+            "count": 0,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "numerator",
+                  "display": "Numerator"
+                }
+              ]
+            }
+          },
+          {
+            "count": 1,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator",
+                  "display": "Denominator"
+                }
+              ]
+            }
+          },
+          {
+            "count": 0,
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                  "code": "denominator-exclusion",
+                  "display": "Denominator Exclusion"
+                }
+              ]
+            }
+          }
+        ],
+        "measureScore": {
+          "value": 0
+        }
+      }
+    ],
+    "evaluatedResource": [
+      {
+        "reference": "#04eb1599-9412-4115-b3cd-d62ef1755d71"
+      },
+      {
+        "reference": "#a64b1f69-946a-4961-ab84-532b54343472"
+      },
+      {
+        "reference": "#8cea8b21-cfdc-45c1-a112-f8bebaf24ac3"
+      },
+      {
+        "reference": "#2f68beb2-bbf9-4c98-b04d-6e766c7b9123"
+      },
+      {
+        "reference": "Patient/denom-EXM130"
+      },
+      {
+        "reference": "Procedure/denom-EXM130-2"
+      },
+      {
+        "reference": "Encounter/denom-EXM130-1"
+      }
+    ],
+    "subject": {
+      "reference": "Patient/denom-EXM130"
+    }
+  }
+]
