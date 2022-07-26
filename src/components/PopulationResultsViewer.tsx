@@ -21,7 +21,7 @@ export default function PopulationReportViewer({
       return extractTableHeaders(firstMR);
     }
     return [];
-  }, reports);
+  }, [firstMR]);
 
   /**
    * Converts an array of FHIR MeasureReport information with or without labels and formats it into JSX table rows for display
@@ -107,7 +107,6 @@ export default function PopulationReportViewer({
 function extractTableHeaders(mr: fhirJson.MeasureReport): string[] {
   const group = mr.group?.[0];
   if (group?.population?.length) {
-    console.log(group.population);
     return group?.population.map((e) => {
       return e?.code?.coding?.[0]?.display || e?.code?.coding?.[0]?.code || '';
     });
