@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import MeasureReportsViewer from '../src/components/PopulationResultsViewer';
+import { PopulationResultsViewer } from '../src';
 const mrs = require('../test/fixtures/measureReports.json');
 
 const labeledFixture = [
@@ -10,7 +10,7 @@ const labeledFixture = [
 const App = () => {
   return (
     <div>
-      <MeasureReportsViewer reports={mrs} />
+      <PopulationResultsViewer reports={mrs} />
     </div>
   );
 };
