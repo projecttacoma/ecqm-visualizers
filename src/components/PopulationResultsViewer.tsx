@@ -99,7 +99,12 @@ export default function PopulationReportViewer({
   );
 }
 
-function extractTableHeaders(mr: fhirJson.MeasureReport) {
+/**
+ * Pulls off the population group displays/codes for use as table headers
+ * @param mr {Object} A FHIR MeasureReport
+ * @returns an array of strings to be displayed as table headers
+ */
+function extractTableHeaders(mr: fhirJson.MeasureReport): string[] {
   const group = mr.group?.[0];
   if (group?.population?.length) {
     console.log(group.population);
