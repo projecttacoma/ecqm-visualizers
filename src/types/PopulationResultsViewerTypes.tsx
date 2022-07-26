@@ -15,8 +15,5 @@ export type MeasureReportInfoArray = Array<
 
 export type PopulationResult = {
   label: string;
-  numerator?: number;
-  denominator?: number;
-  'initial-population'?: number;
-  'denominator-exclusion'?: number;
+  [key: string]: number | string;
 };

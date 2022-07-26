@@ -10,7 +10,7 @@ const labeledFixture = [
 const App = () => {
   return (
     <div>
-      <PopulationResultsViewer reports={mrs} />
+      <PopulationResultsViewer reports={labeledFixture} />
     </div>
   );
 };
